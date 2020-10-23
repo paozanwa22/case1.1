@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merubah Jenis Font</title>
+    <style>
+        .kapital {
+            text-transform: uppercase;
+        }
+        .kecil {
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- cara 1 -->
+    <!-- <input type="text" id="nama" />
+    <button type="button" onclick="cetak()">Cetak</button>
+    <p id="demo"></p> -->
+
+    <!-- cara2 -->
+    <input type="text" id="nama" />
+    <button type="button" id="tombol1">Besar</button>
+    <button type="button" id="tombol2">Kecil</button>
+    <p id="demo"></p>
+
+<script>  
+
+    // cara 1
+    // function cetak() {
+    //     const nama = document.getElementById("nama").value;
+    //     document.getElementById("demo").innerHTML = "<b>" + nama +"</b>";
+    // }
+
+    // cara 2
+    const tKapital = document.querySelector('#tombol1');
+    tKapital.addEventListener('click', function() {
+        const nama = document.getElementById("nama").value;
+        const p = document.querySelector('p');
+
+        document.getElementById("demo").innerHTML = "<b>" + nama +"</b>";
+        p.setAttribute('class', 'kapital');
+    });
+
+    const tKecil = document.querySelector('#tombol2');
+    tKecil.addEventListener('click', function() {
+        const nama = document.getElementById("nama").value;
+        const p = document.querySelector('p');
+
+        document.getElementById("demo").innerHTML = "<b>" + nama +"</b>";
+        p.setAttribute('class', 'kecil');
+    });
+
+
+
+</script>
+</body>
+</html>
